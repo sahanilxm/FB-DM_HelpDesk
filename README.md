@@ -9,7 +9,7 @@ This web application enables Facebook page owners to manage their communication 
 
 ### Installation
 
-1. Clone the repository: `git clone https://github.com/sahanilxm/fb-DM_helpdesk`
+1. Clone the repository: `git clone https://github.com/sahanilxm/fb-DM_helpdesk.git`
 2. Go to the App Folder. `cd fb-DM_helpdesk`
 3. Open the CodeBase in your IDE. `code .`
 4. Open the client folder. `cd client`
