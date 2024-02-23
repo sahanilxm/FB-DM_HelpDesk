@@ -16,6 +16,7 @@ const setupServer = () => {
     app.use(cors({
         origin: [
           "http://localhost:3000",
+          "https://sahanilxm-fb-dm-helpdesk.vercel.app/"
         ],
         methods: ["GET", "POST", "DELETE", "PUT"],
         allowedHeaders: ["Content-Type", "Authorization"],
