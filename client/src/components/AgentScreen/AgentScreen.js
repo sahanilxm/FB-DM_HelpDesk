@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 import "./agentScreen.css";
 import { SERVER_URL, PAGE_ID, PAGE_ACCESS_TOKEN } from "../../config";
-import { inbox, logo, people, stocks, minion, phone, profile, menu, refresh} from '../index.js';
+import { inbox, logo, people, stocks, profile_pic, phone, profile, testing_profile, menu, refresh} from '../index.js';
 
 const AgentScreen = () => {
   const navigate = useNavigate();
@@ -13,6 +13,7 @@ const AgentScreen = () => {
   const [Email, setEmail] = useState("");
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
+  const [img, setImg] = useState("");
   const [conversations, setConversations] = useState([]);
   const [pageName, setPageName] = useState("");
   const [ShowChat, setShowChat] = useState("");
@@ -132,7 +133,7 @@ const AgentScreen = () => {
 
 
   const handleViewChat = (email, name) => {
-    console.log(name);
+    console.log("t", email, name);
     const [firstName, ...lastNameArray] = name.split(" ");
     const lastName = lastNameArray.join(" ");
 
@@ -143,6 +144,7 @@ const AgentScreen = () => {
     setShowChat(true);
     checkIfNewMessage();
     setRecipientId(email.split('@')[0]);
+    setImg();
 
     conversations.map((conversation) => {
       if (conversation.email === Email && conversation.messages) {
@@ -262,7 +264,7 @@ const AgentScreen = () => {
         <div class="agentDetails">
           <div class="profilePic">
             <img
-              src={minion}
+              src={profile}
               width="70px"
               height="70px"
               alt="Profile Picture"
@@ -344,7 +346,7 @@ const AgentScreen = () => {
       <div className="forth-column">
         <div className="customer-profile-tab">
           <img
-            src={minion}
+            src={profile_pic}
             width="70px"
             height="70px"
             alt="Profile Picture"

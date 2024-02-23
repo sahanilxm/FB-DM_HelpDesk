@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
-import minion from "../../Assets/SpaceMinion.png";
+import profile_pic from "../../Assets/profile_pic.jpg";
+import { testing_profile } from "..";
 
 function formatDateTime(dateTimeString) {
   const months = [
@@ -30,7 +31,7 @@ const Chats = ({ msg, pageName }) => {
     <div className={whoseChat} ref={chatRef}>
       <div className="chat">
         <div className="profilePic">
-          <img src={minion} alt="" />
+          { msg.from.name === "Testing1" ? <img src={testing_profile} alt="" /> : <img src={profile_pic} alt="" />}
         </div>
         <div className="msg-area">
           <p className="msg">{msg.message}</p>
